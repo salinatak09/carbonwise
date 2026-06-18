@@ -34,7 +34,7 @@ export default function MetricCards({ stats }: MetricCardsProps) {
   return (
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
       {/* Carbon Status Card (Hero Card) */}
-      <Card className={cn("relative overflow-hidden md:col-span-2", carbonStatus.bg, "border", carbonStatus.border)}>
+      <Card className={cn("md:col-span-2", carbonStatus.bg, "border", carbonStatus.border)}>
         <div className="absolute top-0 right-0 -mr-6 -mt-6 w-24 h-24 rounded-full opacity-10 bg-current" />
         <CardHeader className="flex flex-row items-center justify-between pb-2">
           <CardTitle className="text-slate-800 dark:text-slate-200 font-medium text-sm">

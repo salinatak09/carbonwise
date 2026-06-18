@@ -7,7 +7,13 @@ import MetricCards from "@/components/dashboard/MetricCards";
 import TrackingForm from "@/components/forms/TrackingForm";
 import AiCoachCard from "@/components/ai/AiCoachCard";
 import DashboardCharts from "@/components/dashboard/DashboardCharts";
-import { CATEGORY_COLORS } from "@/components/charts/EmissionCharts";
+
+// Colors for Category Pie Chart
+const CATEGORY_COLORS = {
+  transport: "#3b82f6", // Blue
+  food: "#f59e0b",      // Amber
+  electricity: "#8b5cf6", // Purple
+};
 
 export const dynamic = "force-dynamic";
 

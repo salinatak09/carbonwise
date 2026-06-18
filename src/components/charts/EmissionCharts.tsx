@@ -7,7 +7,6 @@ import {
   Pie,
   Cell,
   Tooltip,
-  Legend,
   AreaChart,
   Area,
   XAxis,
@@ -15,13 +14,6 @@ import {
   CartesianGrid,
 } from "recharts";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
-
-// Colors for Category Pie Chart
-const CATEGORY_COLORS = {
-  transport: "#3b82f6", // Blue
-  food: "#f59e0b",      // Amber
-  electricity: "#8b5cf6", // Purple
-};
 
 interface PieData {
   name: string;
@@ -61,7 +53,7 @@ export default function EmissionCharts({ pieData, trendData }: EmissionChartsPro
               <p className="text-xs mt-1">Log your first footprint entry to see analytics.</p>
             </div>
           ) : (
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height={400}>
               <AreaChart data={trendData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorTotal" x1="0" y1="0" x2="0" y2="1">
@@ -121,7 +113,7 @@ export default function EmissionCharts({ pieData, trendData }: EmissionChartsPro
           ) : (
             <>
               <div className="h-56">
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height={400}>
                   <PieChart>
                     <Pie
                       data={pieData}
@@ -171,4 +163,3 @@ export default function EmissionCharts({ pieData, trendData }: EmissionChartsPro
     </div>
   );
 }
-export { CATEGORY_COLORS };
